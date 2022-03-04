@@ -12,7 +12,7 @@
 
 .navigation__link {
   padding: 0.8rem 1rem;
-  @include dflex(row, wrap, start, center);
+  @include dflex(row, wrap, flex-start, center);
   border-radius: 10px;
   text-decoration: none;
   color: $jumbo;

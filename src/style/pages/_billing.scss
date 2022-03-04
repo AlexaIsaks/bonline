@@ -26,7 +26,7 @@
 .billing__accounts {
   grid-column: 1 / 13;
   grid-row: 1 / 2;
-  @include dflex(row, wrap, start, center);
+  @include dflex(row, wrap, flex-start, center);
 }
 
 .billing__payment-details {
@@ -55,7 +55,7 @@
 }
 
 .account__header {
-  @include dflex(row, wrap, start, center);
+  @include dflex(row, wrap, flex-start, center);
   margin-bottom: 0.8rem;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .payment-details__content-inner {
-  @include dflex(row, nowrap, space-between, start);
+  @include dflex(row, nowrap, space-between, flex-start);
 }
 
 .payment-details__next-invoice {
@@ -142,7 +142,7 @@
 }
 
 .payment-details__discription-container {
-  @include dflex(row, nowrap, center, start);
+  @include dflex(row, nowrap, center, flex-start);
 }
 
 .payment-details__lock-icon {
@@ -174,7 +174,7 @@
 }
 
 .payment-details__method-header {
-  @include dflex(row, wrap, start, center);
+  @include dflex(row, wrap, flex-start, center);
   margin-bottom: 2rem;
 }
 
@@ -227,7 +227,7 @@
 
 .products__item {
   padding: 1rem 0;
-  @include dflex(row, wrap, start, center);
+  @include dflex(row, wrap, flex-start, center);
 
   border-bottom: 1px solid $jumbo;
   color: $jumbo;

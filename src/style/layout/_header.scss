@@ -55,7 +55,7 @@
 }
 
 .site-header__user-details {
-  @include dflex(column, wrap, center, start);
+  @include dflex(column, wrap, center, flex-start);
   margin: 0 1rem;
 }
 
