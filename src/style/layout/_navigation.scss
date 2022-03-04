@@ -1,0 +1,30 @@
+// Site navigation
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.navigation__item {
+  margin-bottom: 0.5rem;
+}
+
+.navigation__link {
+  padding: 0.8rem 1rem;
+  @include dflex(row, wrap, start, center);
+  border-radius: 10px;
+  text-decoration: none;
+  color: $jumbo;
+}
+
+.navigation__link--active {
+  background-color: $curiousblue;
+  color: $offwhite;
+}
+
+.navigation__icon {
+  margin-right: 0.8rem;
+  @include dflex(row, wrap, center, center);
+  font-size: 1.2rem;
+}

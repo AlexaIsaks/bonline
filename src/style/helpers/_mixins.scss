@@ -1,0 +1,14 @@
+//Media queries and breakpoints
+@mixin media-query($breakpoint) {
+  @media only screen and (map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+//Flexbox layout
+@mixin dflex($direction, $wrap, $justify-content, $align-items) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

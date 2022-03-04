@@ -1,0 +1,279 @@
+// Billing page
+.billing__main-header {
+  padding: 0 0 1.2rem 1rem;
+  color: $oxfordblue;
+}
+
+.billing__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+.billing__description {
+  margin: 0;
+  font-weight: 600;
+}
+
+.billing__content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  row-gap: 1rem;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  background-color: $catskillwhite;
+}
+
+.billing__accounts {
+  grid-column: 1 / 13;
+  grid-row: 1 / 2;
+  @include dflex(row, wrap, start, center);
+}
+
+.billing__payment-details {
+  grid-column: 1 / 8;
+  grid-row: 2 / 3;
+  margin-right: 1rem;
+}
+
+.billing__my-products {
+  grid-column: 8 / 13;
+  grid-row: 2 / 3;
+}
+
+.billing__history {
+  grid-column: 1 / 13;
+  grid-row: 3 / 4;
+}
+
+// Account section
+.account {
+  margin-right: 1rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  width: 15rem;
+  border: 1px solid $curiousblue;
+  border-radius: 10px;
+}
+
+.account__header {
+  @include dflex(row, wrap, start, center);
+  margin-bottom: 0.8rem;
+}
+
+.account__title {
+  margin: 0 0.8rem 0 0;
+  color: $curiousblue;
+  font-size: 1rem;
+}
+
+.account__active-indicator {
+  padding: 0.3rem;
+
+  background-color: $lightjava;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: $java;
+  font-weight: 600;
+}
+
+.account__id {
+  color: $jumbo;
+}
+
+.account--active {
+ background-color: $lightcuriousblue;
+}
+
+.account__active-indicator--active {
+  background-color: $offwhite;
+}
+
+// Payment details section
+.payment-details {
+  background-color: $offwhite;
+  border-radius: 10px;
+}
+
+.payment-details__header {
+  padding: 1rem 1rem 0.5rem;
+  border-bottom: 1px solid $jumbo;
+}
+
+.payment-details__title {
+  margin: 0 0 0.5rem;
+
+  font-size: 1.2rem;
+}
+
+.payment-details__description {
+  margin: 0;
+}
+
+.payment-details__content {
+  padding: 1.4rem 1.4rem 2rem;
+}
+
+.payment-details__content-inner {
+  @include dflex(row, nowrap, space-between, start);
+}
+
+.payment-details__next-invoice {
+  margin: 0 0 1rem;
+}
+
+// Payemnt details- current balance
+.payment-details__balance {
+  margin-right: 1rem;
+  padding: 1rem;
+  width: 50%;
+  background-color: $catskillwhite;
+  border-radius: 10px;
+}
+
+.payment-details__balance-title {
+  margin: 0 0 0.5rem;
+
+  font-size: 1.1rem;
+}
+
+.payment-details__balance-amount {
+  margin: 0 0 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.payment-details__discription-container {
+  @include dflex(row, nowrap, center, start);
+}
+
+.payment-details__lock-icon {
+  margin-right: 1rem;
+  font-size: 1.8rem;
+}
+
+.payment-details__description {
+  margin: 0 0 1.5rem;
+}
+
+.payment-details__button {
+  padding: 0.5rem 1rem;
+
+  background-color: $curiousblue;
+  border: none;
+  border-radius: 10px;
+  color: $offwhite;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+// Payment details - payment method
+.payment-details__method {
+  padding: 1rem;
+  width: 50%;
+  background-color: $catskillwhite;
+  border-radius: 10px;
+}
+
+.payment-details__method-header {
+  @include dflex(row, wrap, start, center);
+  margin-bottom: 2rem;
+}
+
+.payment-details__method-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.payment-details__bulb-icon {
+  color: $java;
+}
+
+.payment-details__guide {
+  font-weight: bolder;
+  color: $java;
+}
+
+.payment-detail__method-annual {
+  padding: 0.3rem 0.4rem;
+
+  background-color: $offwhite;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+// Products section
+.products {
+  background-color: $offwhite;
+  border-radius: 10px;
+}
+
+.products__header {
+  padding: 1rem 1rem 0.5rem;
+  border-bottom: 1px solid $jumbo;
+}
+
+.products__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.products__description {
+  margin: 0;
+}
+
+.products__content {
+  padding: 1.4rem 1.4rem 2rem;
+}
+
+.products__item {
+  padding: 1rem 0;
+  @include dflex(row, wrap, start, center);
+
+  border-bottom: 1px solid $jumbo;
+  color: $jumbo;
+}
+
+.products__product-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.products__product-info {
+  font-size: 0.85rem;
+}
+
+// Billing history section
+.billing-history {
+  background-color: $offwhite;
+  border-radius: 10px;
+}
+
+.billing-history__header {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid $jumbo;
+}
+
+.billing-history__title{
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.billing-history__description {
+  margin: 0;
+}
+
+.billing-history__list {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.billing-history__list-header {
+  border-top: 1px solid $jumbo;
+  border-bottom: 1px solid $jumbo;
+}
+
+.billing-history__download {
+  color: $curiousblue;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,25 @@
+// Colours
+$offwhite: #fff;
+$catskillwhite: #f5f7fa;
+$jumbo: #727273;
+$java: #19d5b2;
+$lightjava: rgba(25, 213, 178, 0.1);
+$curiousblue: #1f8ceb;
+$lightcuriousblue: rgba(31, 140, 235, 0.1);
+$oxfordblue: #394455;
+
+
+// Media queries and breakpoints
+// Based on Bootstrap 5 Breakpoints
+$breakpoints: (
+  //Extra small devices: phones
+  "extra-small": "max-width: 575.99px",
+  //Small devices: landscape phones
+  "small": "min-width: 576px",
+  //Medium devices: tablets
+  "medium": "min-width: 768px",
+  //Large devices: desktops, laptops
+  "large": "min-width: 992px",
+  //Extra large devices: large  desktops,
+  "extra-large": "min-width: 1200px" 
+);

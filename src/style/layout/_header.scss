@@ -1,0 +1,75 @@
+// Site header
+.site-header {
+  @include dflex(row, wrap, space-between, center);
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid $jumbo;
+}
+
+.site-header__bonline-logo {
+  width: 7.938rem;
+}
+
+.site-header__user-container {
+  @include dflex(row, wrap, center, center);
+}
+
+.site-header__notification-container {
+  position: relative;
+  margin-right: 1rem;
+  width: fit-content;
+}
+
+.site-header__notification-icon {
+  font-size: 1.3rem;
+}
+
+.site-header__notification-indicator {
+  position: absolute;
+  top: 0;
+  right: 0.1rem;
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+
+  border-radius: 50%;
+  background-color: $curiousblue;
+}
+
+.site-header__avatar-container {
+  height: 2.4rem;
+  width: 2.4rem;
+
+  border-radius: 50%;
+}
+
+.site-header__user {
+  @include dflex(row, wrap, center, center);
+  padding-left: 1rem;
+  border-left: 1px solid $jumbo;
+}
+
+.site-header__avatar {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.site-header__user-details {
+  @include dflex(column, wrap, center, start);
+  margin: 0 1rem;
+}
+
+.site-header__user-fullname {
+  margin-bottom: 0.1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $oxfordblue;
+}
+
+.site-header__user-email {
+  color: $curiousblue;
+}
+
+.site-header__chevron-down {
+  font-size: 1.3rem;
+}
