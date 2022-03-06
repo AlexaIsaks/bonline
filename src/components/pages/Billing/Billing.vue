@@ -128,11 +128,13 @@
             </tbody>
           </table>
         </div>
+        <div class="billing-history__pagination-container">
+            <Pagination />
+          </div>
       </template>
       <div v-else class="billing__message-container">
         <h3 class="billing__message">No billing history available.</h3>
       </div>
-
         <!--Billing history list END-->
       </section>
     </div>
@@ -148,9 +150,10 @@
 <script>
 import Product from './Product.vue'
 import Bill from "./Bill.vue"
+import Pagination from "../../components/Pagination.vue"
 
 export default {
-  components: {Product, Bill},
+  components: {Product, Bill, Pagination},
   props: ["accountId"],
   data() {
     return {

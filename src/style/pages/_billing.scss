@@ -107,13 +107,13 @@
 
 .account__header {
   @include dflex(row, wrap, flex-start, center);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .account__title {
   margin: 0 0.8rem 0 0;
   color: $curiousblue;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .account__active-indicator {
@@ -128,6 +128,8 @@
 
 .account__id {
   color: $grey-3;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .account--active {
@@ -309,7 +311,8 @@
 
 .products__product-icon {
   margin-right: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  @include dflex(row, wrap, center,center);
 }
 
 .products__product-info {
@@ -342,11 +345,12 @@
 }
 
 .billing-history__list-container {
+  padding-bottom: 2rem;
   overflow-x: auto;
 }
 
 .billing-history__list {
-  margin: 0;
+  margin: 0 0 1rem;
   width: 100%;
 
   border-collapse: collapse;
@@ -379,4 +383,10 @@
 .billing-history__download {
   color: $curiousblue;
   font-size: 1.5rem;
+}
+
+.billing-history__pagination-container {
+ padding: 1rem;
+ width: 100%;
+ @include dflex(row, nowrap, center, center);
 }

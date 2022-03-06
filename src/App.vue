@@ -15,7 +15,7 @@
 <script>
 import Header from "./components/layout/Header.vue"
 import Navigation from "./components/layout/Navigation.vue"
-import Billing from "./components/pages/Billing.vue"
+import Billing from "./components/pages/Billing/Billing.vue"
 
 export default {
   name: 'App',
