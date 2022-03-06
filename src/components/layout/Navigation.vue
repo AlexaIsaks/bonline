@@ -6,7 +6,7 @@
             class="navigation__icon">
             <ion-icon name="home-outline"></ion-icon>
           </span><span>Home</span></a></li>
-      <li><a href="" class="navigation__link navigation__link--active"><span
+      <li class="navigation__item"><a href="" class="navigation__link navigation__link--active"><span
             class="navigation__icon">
             <ion-icon name="card-outline"></ion-icon>
           </span><span>Billing</span></a></li>

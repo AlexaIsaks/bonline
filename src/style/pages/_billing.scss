@@ -1,57 +1,97 @@
 // Billing page
+.billing {
+  border-top: 1px solid $grey-1;
+
+  @include media-query("medium") {
+    border-top: none;
+    border-left: 1px solid $grey-1;
+  }
+}
+
 .billing__main-header {
-  padding: 0 0 1.2rem 1rem;
+  padding: 1rem 1.2rem;
   color: $oxfordblue;
 }
 
 .billing__title {
   margin: 0 0 0.5rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .billing__description {
   margin: 0;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 
 .billing__content {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: auto auto auto;
+  column-gap: 1rem;
   row-gap: 1rem;
-  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  padding: 1rem;
   background-color: $catskillwhite;
+
+  @include media-query("medium") {
+    padding-left: 2rem;
+    padding-right: 3rem;
+    grid-template-rows: auto auto auto auto;
+  }
 }
 
 .billing__accounts {
-  grid-column: 1 / 13;
+  grid-column: 1 / 17;
   grid-row: 1 / 2;
   @include dflex(row, wrap, flex-start, center);
 }
 
+.billing__account {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+
+  @include media-query("large") {
+    margin-right: 1rem;
+  }
+}
+
 .billing__payment-details {
-  grid-column: 1 / 8;
+  grid-column: 1 / 17;
   grid-row: 2 / 3;
-  margin-right: 1rem;
+
+  @include media-query("large") {
+    grid-column: 1 / 12;
+  }
 }
 
 .billing__my-products {
-  grid-column: 8 / 13;
-  grid-row: 2 / 3;
+  grid-column: 1 / 17;
+  grid-row: 3 / 4;
+
+  @include media-query("large") {
+    grid-column: 12 / 17;
+    grid-row: 2 / 3;
+  }
 }
 
 .billing__history {
-  grid-column: 1 / 13;
-  grid-row: 3 / 4;
+  grid-column: 1 / 17;
+  grid-row: 4 / 5;
+
+  @include media-query("large") {
+    grid-row: 3 / 4;
+  }
 }
 
 // Account section
 .account {
-  margin-right: 1rem;
-  padding: 0.5rem 2rem 0.5rem 0.5rem;
-  width: 15rem;
-  border: 1px solid $curiousblue;
+  width: 100%;
+  border: 1px solid $grey-1;
   border-radius: 10px;
+
+  @include media-query("large") {
+    width: 15rem;
+  }
 }
 
 .account__header {
@@ -66,21 +106,22 @@
 }
 
 .account__active-indicator {
-  padding: 0.3rem;
+  padding: 0.2rem 0.4rem;
 
   background-color: $lightjava;
   border-radius: 10px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: $java;
   font-weight: 600;
 }
 
 .account__id {
-  color: $jumbo;
+  color: $grey-3;
 }
 
 .account--active {
- background-color: $lightcuriousblue;
+  border-color: $curiousblue;
+  background-color: $lightcuriousblue;
 }
 
 .account__active-indicator--active {
@@ -90,68 +131,60 @@
 // Payment details section
 .payment-details {
   background-color: $offwhite;
+  border: 1px solid $grey-1;
   border-radius: 10px;
 }
 
 .payment-details__header {
-  padding: 1rem 1rem 0.5rem;
-  border-bottom: 1px solid $jumbo;
+  padding: 1rem 1rem 0.7rem;
+  border-bottom: 1px solid $grey-1;
 }
 
 .payment-details__title {
   margin: 0 0 0.5rem;
-
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: $oxfordblue;
 }
 
-.payment-details__description {
+.payment-details__subtitle {
   margin: 0;
+  font-size: 0.85rem;
+  color: $grey-3;
+  font-weight: 500;
 }
 
 .payment-details__content {
-  padding: 1.4rem 1.4rem 2rem;
-}
-
-.payment-details__content-inner {
-  @include dflex(row, nowrap, space-between, flex-start);
+  padding: 1.4rem 1.4rem 2.5rem;
 }
 
 .payment-details__next-invoice {
   margin: 0 0 1rem;
+  font-weight: 800;
 }
 
-// Payemnt details- current balance
-.payment-details__balance {
-  margin-right: 1rem;
-  padding: 1rem;
-  width: 50%;
+.payment-details__content-inner {
+  @include dflex(column, wrap, center, center);
+
+  @include media-query("large") {
+    @include dflex(row, nowrap, space-between, flex-start);
+  }
+}
+
+.payment-details__block {
+  padding: 1.5rem 1rem;
+  height: 100%;
+  width: 100%;
   background-color: $catskillwhite;
   border-radius: 10px;
+
+  @include media-query("large") {
+    width: 20rem;
+  }
 }
 
-.payment-details__balance-title {
-  margin: 0 0 0.5rem;
-
-  font-size: 1.1rem;
-}
-
-.payment-details__balance-amount {
-  margin: 0 0 1rem;
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-.payment-details__discription-container {
+.payment-details__block-info {
+  margin-bottom: 2rem;
   @include dflex(row, nowrap, center, flex-start);
-}
-
-.payment-details__lock-icon {
-  margin-right: 1rem;
-  font-size: 1.8rem;
-}
-
-.payment-details__description {
-  margin: 0 0 1.5rem;
 }
 
 .payment-details__button {
@@ -159,31 +192,71 @@
 
   background-color: $curiousblue;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   color: $offwhite;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
-// Payment details - payment method
-.payment-details__method {
-  padding: 1rem;
-  width: 50%;
-  background-color: $catskillwhite;
-  border-radius: 10px;
+// Payemnt details- current balance
+.payment-details__balance {
+  margin-bottom: 1rem;
+
+  @include media-query("large") {
+    margin: 0 1rem 0 0;
+  }
 }
 
+.payment-details__balance-amount {
+  margin: 0 0 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: $oxfordblue;
+}
+
+.payment-details__balance-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+}
+
+.payment-details__lock-icon {
+  margin-right: 1rem;
+  font-size: 1.6rem;
+  color: $oxfordblue;
+}
+
+.payment-details__description {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.85rem;
+  color: $grey-3;
+}
+
+// Payment details - payment method
 .payment-details__method-header {
+  margin-bottom: 1.5rem;
   @include dflex(row, wrap, flex-start, center);
-  margin-bottom: 2rem;
 }
 
 .payment-details__method-title {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
+}
+
+.payment-detail__method-annual {
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.4rem;
+
+  background-color: $offwhite;
+  border-radius: 25px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: $oxfordblue;
 }
 
 .payment-details__bulb-icon {
+  margin-right: 1rem;
+  font-size: 1.6rem;
   color: $java;
 }
 
@@ -192,45 +265,41 @@
   color: $java;
 }
 
-.payment-detail__method-annual {
-  padding: 0.3rem 0.4rem;
-
-  background-color: $offwhite;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
 // Products section
 .products {
   background-color: $offwhite;
+  border: 1px solid $grey-1;
   border-radius: 10px;
 }
 
 .products__header {
-  padding: 1rem 1rem 0.5rem;
-  border-bottom: 1px solid $jumbo;
+  padding: 1rem 1rem 0.7rem;
+  border-bottom: 1px solid $grey-1;
 }
 
 .products__title {
   margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: $oxfordblue;
 }
 
-.products__description {
+.products__subtitle {
   margin: 0;
+  font-size: 0.85rem;
+  color: $grey-3;
+  font-weight: 500;
 }
 
 .products__content {
-  padding: 1.4rem 1.4rem 2rem;
+  padding: 0 1.4rem 2rem;
 }
 
 .products__item {
-  padding: 1rem 0;
+  padding: 1.4rem 0;
   @include dflex(row, wrap, flex-start, center);
 
-  border-bottom: 1px solid $jumbo;
-  color: $jumbo;
+  border-bottom: 1px solid $grey-2;
+  color: $grey-3;
 }
 
 .products__product-icon {
@@ -245,35 +314,64 @@
 // Billing history section
 .billing-history {
   background-color: $offwhite;
+  border: 1px solid $grey-1;
   border-radius: 10px;
 }
 
 .billing-history__header {
   padding: 1.5rem 1rem;
-  border-bottom: 1px solid $jumbo;
+  border-bottom: 2px solid $grey-1;
 }
 
-.billing-history__title{
+.billing-history__title {
   margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: $oxfordblue;
 }
 
-.billing-history__description {
+.billing-history__subtitle {
   margin: 0;
+  font-size: 0.85rem;
+  color: $grey-3;
+  font-weight: 500;
+}
+
+.billing-history__list-container {
+  overflow-x: auto;
 }
 
 .billing-history__list {
   margin: 0;
   width: 100%;
+
+  border-collapse: collapse;
   text-align: center;
+  font-size: 0.85rem;
 }
 
 .billing-history__list-header {
-  border-top: 1px solid $jumbo;
-  border-bottom: 1px solid $jumbo;
+  border-bottom: 2px solid $grey-1;
+  color: $oxfordblue;
+}
+
+.billing-history__list-row {
+  font-weight: 600;
+  color: $oxfordblue;
+}
+
+.billing-history__list-row--border {
+  border-bottom: 1px solid $grey-3;
+}
+
+.billing-history__bill-type {
+  padding: 0.1rem;
+  border: 1px solid $grey-2;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  line-height: 1.5;
 }
 
 .billing-history__download {
   color: $curiousblue;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }

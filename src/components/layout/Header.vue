@@ -1,8 +1,10 @@
 <template>
   <!--Site header-->
-  <header class="site-header">
-    <img src="../../assets/brand/bonline-logo.svg" alt="bOnline logo"
-      class="site-header__bonline-logo">
+  <header class="site__header site-header">
+    <div class="site-header__bonline-logo">
+      <img src="../../assets/brand/bonline-logo.svg" alt="bOnline logo" class="bonline-logo">
+    </div>
+    
 
 
     <div class="site-header__user-container">
@@ -11,7 +13,7 @@
         <span class="site-header__notification-icon">
           <ion-icon name="notifications-outline"></ion-icon>
         </span>
-        <span class="site-header__notification-indicator"></span>
+        <span v-if="notification" class="site-header__notification-indicator"></span>
       </div>
 
       <!--User-->
@@ -20,8 +22,8 @@
           <img src="../../assets/avatar.png" alt="name surname" class="site-header__avatar">
         </div>
         <div class="site-header__user-details">
-          <span class="site-header__user-fullname">First Lastname</span>
-          <span class="site-header__user-email">firstlastname@email.com</span>
+          <span v-if="user" class="site-header__user-fullname">{{ user.firstName }} {{ user.lastName}}</span>
+          <span v-if="user" class="site-header__user-email">{{ user.emailAddress }}</span> 
         </div>
 
         <span class="site-header__chevron-down">
@@ -34,7 +36,7 @@
 
 <script>
 export default {
-
+   props: ["user", "notification"]
 }
 </script>
 

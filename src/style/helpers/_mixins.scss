@@ -1,3 +1,18 @@
+// Media queries and breakpoints
+// Based on Bootstrap 5 Breakpoints
+$breakpoints: (
+  //Extra small devices: phones
+  "extra-small": "max-width: 575.99px",
+  //Small devices: landscape phones
+  "small": "min-width: 576px",
+  //Medium devices: tablets
+  "medium": "min-width: 768px",
+  //Large devices: desktops, laptops
+  "large": "min-width: 992px",
+  //Extra large devices: large  desktops,
+  "extra-large": "min-width: 1200px" 
+);
+
 //Media queries and breakpoints
 @mixin media-query($breakpoint) {
   @media only screen and (map-get($breakpoints, $breakpoint)) {

@@ -1,26 +1,37 @@
 // Site header
 .site-header {
-  @include dflex(row, wrap, space-between, center);
-  padding: 0.5rem 1.5rem;
-  border-bottom: 1px solid $jumbo;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  @include dflex(row, nowrap, space-between, center);
+  
+  background-color: $offwhite;
+  border-bottom: 1px solid $grey-1;
 }
 
 .site-header__bonline-logo {
-  width: 7.938rem;
+  width: 5rem;
+  overflow: hidden;
+
+  @include media-query("medium") {
+    width: 7rem;
+  }
 }
 
 .site-header__user-container {
   @include dflex(row, wrap, center, center);
 }
 
+// Notification
 .site-header__notification-container {
   position: relative;
-  margin-right: 1rem;
+  margin-right: 2rem;
   width: fit-content;
 }
 
 .site-header__notification-icon {
   font-size: 1.3rem;
+  color: $oxfordblue;
 }
 
 .site-header__notification-indicator {
@@ -35,17 +46,17 @@
   background-color: $curiousblue;
 }
 
+// User
+.site-header__user {
+  @include dflex(row, wrap, center, center);
+  padding-left: 1.5rem;
+  border-left: 1px solid $grey-1;
+}
+
 .site-header__avatar-container {
   height: 2.4rem;
   width: 2.4rem;
-
   border-radius: 50%;
-}
-
-.site-header__user {
-  @include dflex(row, wrap, center, center);
-  padding-left: 1rem;
-  border-left: 1px solid $jumbo;
 }
 
 .site-header__avatar {
@@ -55,21 +66,33 @@
 }
 
 .site-header__user-details {
-  @include dflex(column, wrap, center, flex-start);
-  margin: 0 1rem;
+  display: none;
+
+  @include media-query("medium") {
+    display: block;
+    @include dflex(column, wrap, center, flex-start);
+    margin: 0 1rem;
+  } 
 }
 
 .site-header__user-fullname {
   margin-bottom: 0.1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: $oxfordblue;
 }
 
 .site-header__user-email {
   color: $curiousblue;
+  font-size: 0.8rem;
 }
 
 .site-header__chevron-down {
-  font-size: 1.3rem;
+  margin-left: 1rem;
+  @include dflex(row, wrap, center, center);
+  font-size: 1.2rem;
+
+  @include media-query("medium") {
+    margin: 0;
+  }
 }
