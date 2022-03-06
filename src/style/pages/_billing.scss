@@ -1,6 +1,7 @@
 // Billing page
 .billing {
   border-top: 1px solid $grey-1;
+  height: 100%;
 
   @include media-query("medium") {
     border-top: none;
@@ -38,6 +39,16 @@
     padding-right: 3rem;
     grid-template-rows: auto auto auto auto;
   }
+}
+
+.billing__message-container {
+  @include dflex(row, wrap, center, center);  
+}
+
+.billing__message {
+  text-align: center;
+  font-size: 1rem;
+  color: $curiousblue;
 }
 
 .billing__accounts {
@@ -166,13 +177,14 @@
   @include dflex(column, wrap, center, center);
 
   @include media-query("large") {
-    @include dflex(row, nowrap, space-between, flex-start);
+    @include dflex(row, wrap, center, flex-start);
   }
 }
 
 .payment-details__block {
+  margin: 0 0.5rem 1rem;
   padding: 1.5rem 1rem;
-  height: 100%;
+  height: 15rem;
   width: 100%;
   background-color: $catskillwhite;
   border-radius: 10px;
@@ -193,20 +205,13 @@
   background-color: $curiousblue;
   border: none;
   border-radius: 8px;
+  text-decoration: none;
   color: $offwhite;
   font-size: 1rem;
   font-weight: 600;
 }
 
 // Payemnt details- current balance
-.payment-details__balance {
-  margin-bottom: 1rem;
-
-  @include media-query("large") {
-    margin: 0 1rem 0 0;
-  }
-}
-
 .payment-details__balance-amount {
   margin: 0 0 1rem;
   font-weight: bold;
@@ -234,7 +239,7 @@
 
 // Payment details - payment method
 .payment-details__method-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   @include dflex(row, wrap, flex-start, center);
 }
 
@@ -360,7 +365,7 @@
 }
 
 .billing-history__list-row--border {
-  border-bottom: 1px solid $grey-3;
+  border-bottom: 1px solid $grey-2;
 }
 
 .billing-history__bill-type {

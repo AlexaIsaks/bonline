@@ -29,7 +29,8 @@
             "email_address": null,
             "mobile_number": null,
             "phone_number": null
-        }
+        },
+        "billing_history": []
     },
     {
         "account_id": 291321,
@@ -131,6 +132,7 @@
             "email_address": "simplemachines.org",
             "mobile_number": "07855521456",
             "phone_number": "07855521456"
-        }
+        },
+        "billing_history": []
     }
 ]

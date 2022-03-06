@@ -1,9 +1,9 @@
 <template>
-  <tr class="billing-history__list-row">
+  <tr class="billing-history__list-row" :class="{'billing-history__list-row--border': index < lastIndex}">
     <td>{{ bill.date }}</td>
     <td> <span class="billing-history__bill-type">{{ bill.type }}</span></td>
-    <td>R{{ bill.amount }}</td>
-    <td>R{{ bill.balance }}</td>
+    <td>{{ currencySymbol }}{{ bill.amount }}</td>
+    <td>{{ currencySymbol }}{{ bill.balance }}</td>
     <td>{{ bill.reference }}</td>
     <td class="billing-history__download">
       <ion-icon name="download-outline"></ion-icon>
@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  props:["bill"]
+  props:["bill", "index", "lastIndex", "currencySymbol"]
 }
 </script>
