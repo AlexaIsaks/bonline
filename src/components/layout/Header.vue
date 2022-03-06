@@ -4,8 +4,6 @@
     <div class="site-header__bonline-logo">
       <img src="../../assets/brand/bonline-logo.svg" alt="bOnline logo" class="bonline-logo">
     </div>
-    
-
 
     <div class="site-header__user-container">
       <!--Site notfication-->
@@ -19,11 +17,12 @@
       <!--User-->
       <div class="site-header__user">
         <div class="site-header__avatar-container">
-          <img src="../../assets/avatar.png" alt="name surname" class="site-header__avatar">
+          <img src="../../assets/avatar.png" alt="avatar" class="site-header__avatar">
         </div>
         <div class="site-header__user-details">
-          <span v-if="user" class="site-header__user-fullname">{{ user.firstName }} {{ user.lastName}}</span>
-          <span v-if="user" class="site-header__user-email">{{ user.emailAddress }}</span> 
+          <span v-if="user" class="site-header__user-fullname">{{ user.firstName }}
+            {{ user.lastName}}</span>
+          <span v-if="user" class="site-header__user-email">{{ user.emailAddress }}</span>
         </div>
 
         <span class="site-header__chevron-down">
@@ -36,10 +35,6 @@
 
 <script>
 export default {
-   props: ["user", "notification"]
+  props: ["user", "notification"]
 }
 </script>
-
-<style>
-
-</style>

@@ -1,5 +1,7 @@
 <template>
-  <tr class="billing-history__list-row" :class="{'billing-history__list-row--border': index < lastIndex}">
+  <!--Individual bill-->
+  <tr class="billing-history__list-row"
+    :class="{'billing-history__list-row--border': index < lastIndex}">
     <td>{{ bill.date }}</td>
     <td> <span class="billing-history__bill-type">{{ bill.type }}</span></td>
     <td>{{ currencySymbol }}{{ bill.amount }}</td>
@@ -13,6 +15,6 @@
 
 <script>
 export default {
-  props:["bill", "index", "lastIndex", "currencySymbol"]
+  props: ["bill", "index", "lastIndex", "currencySymbol"]
 }
 </script>
