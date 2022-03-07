@@ -10,10 +10,5 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Notes
+ For the purpose of dynamically adding user data to the page, the data.json file was placed in the public folder. Ideally, the data would have been retrieved using Express.js and Node.js.

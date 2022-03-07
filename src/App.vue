@@ -1,12 +1,12 @@
 <template>
   <div class="site">
-    <Header :user="user" :notification="notification"/>
+    <Header :user="user" :notification="notification" />
     <div class="site__inner">
       <div class="site__aside">
         <Navigation />
       </div>
       <div class="site__main">
-        <Billing :accountId="accountId"/>
+        <Billing :accountId="accountId" />
       </div>
     </div>
   </div>
@@ -19,13 +19,17 @@ import Billing from "./components/pages/Billing/Billing.vue"
 
 export default {
   name: 'App',
-  components: {Header, Navigation, Billing},
+  components: {
+    Header,
+    Navigation,
+    Billing
+  },
   data() {
     return {
       accountId: 291321,
       notification: true,
       user: null
-    }    
+    }
   },
   mounted() {
     fetch("./data/data.json")
@@ -36,13 +40,12 @@ export default {
         })
 
         this.user = {
-            firstName: user.first_name,
-            lastName: user.last_name,
-            emailAddress: user.email_address
-          }
+          firstName: user.first_name,
+          lastName: user.last_name,
+          emailAddress: user.email_address
+        }
       })
   }
-
 }
 </script>
 

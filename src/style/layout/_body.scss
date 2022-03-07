@@ -25,7 +25,7 @@
 .site__aside {
   height: 100%;
   width: 100%;
-  
+
   @include media-query("medium") {
     position: fixed;
     top: 5.5rem;

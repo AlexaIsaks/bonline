@@ -42,7 +42,7 @@
 }
 
 .billing__message-container {
-  @include dflex(row, wrap, center, center);  
+  @include dflex(row, wrap, center, center);
 }
 
 .billing__message {
@@ -312,7 +312,7 @@
 .products__product-icon {
   margin-right: 0.5rem;
   font-size: 1.4rem;
-  @include dflex(row, wrap, center,center);
+  @include dflex(row, wrap, center, center);
 }
 
 .products__product-info {
@@ -386,7 +386,7 @@
 }
 
 .billing-history__pagination-container {
- padding: 1rem;
- width: 100%;
- @include dflex(row, nowrap, center, center);
+  padding: 1rem;
+  width: 100%;
+  @include dflex(row, nowrap, center, center);
 }

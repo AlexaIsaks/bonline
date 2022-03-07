@@ -23,7 +23,7 @@
 
 .navigation__item {
   margin: 0 0.5rem;
-  
+
   @include media-query("medium") {
     margin: 0 0 0.5rem;
   }

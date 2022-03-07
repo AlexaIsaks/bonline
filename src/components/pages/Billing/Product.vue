@@ -1,3 +1,4 @@
+<!--Product-->
 <template>
   <div class="products__item">
     <span class="products__product-icon">

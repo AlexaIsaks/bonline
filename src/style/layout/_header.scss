@@ -4,7 +4,7 @@
   overflow: hidden;
   z-index: 1;
   @include dflex(row, nowrap, space-between, center);
-  
+
   background-color: $offwhite;
   border-bottom: 1px solid $grey-1;
 }
@@ -72,7 +72,7 @@
     display: block;
     @include dflex(column, wrap, center, flex-start);
     margin: 0 1rem;
-  } 
+  }
 }
 
 .site-header__user-fullname {
